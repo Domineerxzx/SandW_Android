@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="购物袋"
+            android:textColor="#000"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/iv_close_shop_bag"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/back" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_coast"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/rl_title">
+
+        <TextView
+            android:id="@+id/tv_little"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="小计 ￥"
+            android:textColor="#000"
+            android:textSize="8dp" />
+
+        <TextView
+            android:id="@+id/tv_little_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_little"
+            android:text="0.00"
+            android:textColor="#000"
+            android:textSize="8dp" />
+
+        <TextView
+            android:id="@+id/tv_delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_little"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text="配送 ￥"
+            android:textColor="#ce8106"
+            android:textSize="8dp" />
+
+        <TextView
+            android:id="@+id/tv_delivery_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_little_num"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/tv_delivery"
+            android:text="0.00"
+            android:textColor="#ce8106"
+            android:textSize="8dp" />
+
+        <TextView
+            android:id="@+id/tv_count_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="0.00"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/tv_count_num"
+            android:text="总计 ￥"
+            android:textColor="#000"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_count_num"
+            android:layout_marginRight="10dp"
+            android:text="（价格已包含关税）"
+            android:textColor="#747474"
+            android:textSize="8dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_coast"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_coast"
+        android:layout_marginTop="5dp"
+        android:background="#9dbebebe" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/v_coast">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_shop_bag_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rl_shop_bag_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_shop_bag_empty"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_centerInParent="true"
+                        android:background="@mipmap/shopbag" />
+
+                    <TextView
+                        android:id="@+id/tv_shop_bag_empty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_shop_bag_empty"
+                        android:layout_centerInParent="true"
+                        android:text="您的购物袋空空如也......"
+                        android:textColor="#000"
+                        android:textSize="12dp" />
+
+                    <Button
+                        android:id="@+id/bt_shop_bag_empty"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/tv_shop_bag_empty"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/shape_background_login"
+                        android:text="去选购"
+                        android:textColor="#fff"
+                        android:textSize="12dp" />
+
+                </RelativeLayout>
+
+                <com.triplebro.aran.sandw.views.InnerListView
+                    android:id="@+id/ilv_shop_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_shop_bag_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="需要帮助？"
+                    android:textColor="#000"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="请以如下方式联系我们的客服："
+                    android:textColor="#595959"
+                    android:textSize="10dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#9dbebebe" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="14天无理由免费退货（退款含税）"
+                    android:textColor="#000"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="还在犹豫？别担心，我们提供14天无理由免费退货。来自中国内地的退货，您的退款将包含下单时所支付的关税。"
+                    android:textColor="#595959"
+                    android:textSize="10dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#9dbebebe" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_shop_contact_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/iv_shop_contact_phone"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:background="@mipmap/contact_phone" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#9dbebebe" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_shop_contact_email"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/iv_shop_contact_email"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:background="@mipmap/contact_email" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="50dp"
+                    android:background="#9dbebebe" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/bt_settlement"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/shape_background_login"
+        android:text="去结算"
+        android:textColor="#fff"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="登录"
+            android:textColor="#000"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/iv_close_login"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/back" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_title"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="电子邮箱："
+        android:textSize="10dp" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@id/tv_email"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_background_input"
+        android:hint="   请输入电子邮箱"
+        android:inputType="textEmailAddress"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/tv_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_email"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="密码："
+        android:textSize="10dp" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@id/tv_password"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_background_input"
+        android:hint="   请输入密码"
+        android:inputType="textPassword"
+        android:textSize="12dp" />
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/et_password"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_background_login"
+        android:text="登录"
+        android:textColor="#fff"
+        android:textSize="12dp" />
+
+    <Button
+        android:id="@+id/bt_forget"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/bt_login"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="#0000"
+        android:gravity="center"
+        android:text="忘记密码？"
+        android:textColor="#000"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/bt_create"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_background_create"
+        android:text="创建新账户"
+        android:textColor="#000"
+        android:textSize="12dp" />
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <com.triplebro.aran.sandw.views.InnerListView
+        android:id="@+id/ilv_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_order_coast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5566.00"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/ilv_order"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tv_order_coast_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ilv_order"
+        android:text="￥"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_toLeftOf="@id/tv_order_coast"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/tv_order_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="共3件商品 需付款："
+        android:textSize="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@id/tv_order_coast_unit"/>
+    <View
+        android:id="@+id/v_order_coast"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#9dbebebe"
+        android:layout_below="@id/tv_order_coast"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_order_to_pay"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:background="@drawable/shape_background_login"
+        android:textColor="#fff"
+        android:text="hahaha"
+        android:textSize="10dp"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/v_order_coast"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"/>
+    <TextView
+        android:id="@+id/tv_order_to_cancel"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:background="@drawable/shape_background_create"
+        android:textColor="#000"
+        android:text="取消订单"
+        android:textSize="10dp"
+        android:gravity="center"
+        android:layout_toLeftOf="@id/tv_order_to_pay"
+        android:layout_below="@id/v_order_coast"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp" />
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">S&amp;W</string>
+    <string name="title_first_page">S&amp;W</string>
+    <string name="title_type">商品类别</string>
+    <string name="title_brand">品牌</string>
+    <string name="title_loves">愿望单</string>
+    <string name="title_myself">我的账户</string>
+    <string name="title_userInfo">个人信息与密码</string>
+    <string name="title_change_password">修改密码</string>
+    <string name="title_address_manager">地址簿</string>
+    <string name="title_change_address">修改地址信息</string>
+    <string name="title_add_address">添加新地址</string>
+    <string name="title_brand_list">品牌列表</string>
+</resources>
